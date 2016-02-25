@@ -6,7 +6,6 @@
     <services>
         <!-- profile form -->
         <service id="sonata.user.profile.form" class="Symfony\Component\Form\Form">
-            <factory service="form.factory" method="createNamed"/>
             <argument>%sonata.user.profile.form.name%</argument>
             <argument>%sonata.user.profile.form.type%</argument>
             <argument>null</argument>
@@ -36,7 +35,6 @@
         </service>
 
         <service id="sonata.user.registration.form" class="Symfony\Component\Form\Form">
-            <factory service="form.factory" method="createNamed"/>
             <argument>%sonata.user.registration.form.name%</argument>
             <argument>%sonata.user.registration.form.type%</argument>
             <argument>null</argument>
