@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 /*
  * This file is part of the Sonata Project package.
  *
@@ -51,7 +49,7 @@ class RequestListener
     /**
      * @param GetResponseEvent $event
      */
-    public function onCoreRequest(GetResponseEvent $event): void
+    public function onCoreRequest(GetResponseEvent $event)
     {
         if (HttpKernel::MASTER_REQUEST != $event->getRequestType()) {
             return;

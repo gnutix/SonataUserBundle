@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 /*
  * This file is part of the Sonata Project package.
  *
@@ -26,7 +24,7 @@ class ConfigurationTest extends TestCase
         return new Configuration();
     }
 
-    public function testDefault(): void
+    public function testDefault()
     {
         $this->assertProcessedConfigurationEquals([
             [],

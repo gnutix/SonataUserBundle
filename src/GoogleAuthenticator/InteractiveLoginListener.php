@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 /*
  * This file is part of the Sonata Project package.
  *
@@ -35,7 +33,7 @@ class InteractiveLoginListener
     /**
      * @param InteractiveLoginEvent $event
      */
-    public function onSecurityInteractiveLogin(InteractiveLoginEvent $event): void
+    public function onSecurityInteractiveLogin(InteractiveLoginEvent $event)
     {
         if (!$this->helper->needToHaveGoogle2FACode($event->getRequest())) {
             return;

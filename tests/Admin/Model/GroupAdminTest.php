@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 /*
  * This file is part of the Sonata Project package.
  *
@@ -21,7 +19,7 @@ use Sonata\UserBundle\Admin\Model\GroupAdmin;
  */
 final class GroupAdminTest extends TestCase
 {
-    public function testInstance(): void
+    public function testInstance()
     {
         $admin = new GroupAdmin('admin.group', 'Sonata\UserBundle\Model\Group', 'SonataAdminBundle:CRUD');
 

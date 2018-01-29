@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 /*
  * This file is part of the Sonata Project package.
  *
@@ -20,12 +18,12 @@ class AdminResettingControllerTest extends TestCase
 {
     private $controller;
 
-    protected function setUp(): void
+    protected function setUp()
     {
         $this->controller = new AdminResettingController();
     }
 
-    public function testItIsInstantiable(): void
+    public function testItIsInstantiable()
     {
         $this->assertNotNull($this->controller);
     }

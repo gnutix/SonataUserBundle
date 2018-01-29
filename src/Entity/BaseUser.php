@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 /*
  * This file is part of the Sonata Project package.
  *
@@ -24,7 +22,7 @@ class BaseUser extends AbstractedUser
     /**
      * Hook on pre-persist operations.
      */
-    public function prePersist(): void
+    public function prePersist()
     {
         $this->createdAt = new \DateTime();
         $this->updatedAt = new \DateTime();
@@ -33,7 +31,7 @@ class BaseUser extends AbstractedUser
     /**
      * Hook on pre-update operations.
      */
-    public function preUpdate(): void
+    public function preUpdate()
     {
         $this->updatedAt = new \DateTime();
     }

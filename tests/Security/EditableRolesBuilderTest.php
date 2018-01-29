@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 /*
  * This file is part of the Sonata Project package.
  *
@@ -23,7 +21,7 @@ class EditableRolesBuilderTest extends TestCase
     /**
      * @group legacy
      */
-    public function testRolesFromHierarchy(): void
+    public function testRolesFromHierarchy()
     {
         $token = $this->createMock('Symfony\Component\Security\Core\Authentication\Token\TokenInterface');
 
@@ -73,7 +71,7 @@ class EditableRolesBuilderTest extends TestCase
         $this->assertEquals($expected, $roles);
     }
 
-    public function testRolesFromAdminWithMasterAdmin(): void
+    public function testRolesFromAdminWithMasterAdmin()
     {
         $securityHandler = $this->createMock('Sonata\AdminBundle\Security\Handler\SecurityHandlerInterface');
         $securityHandler->expects($this->exactly(2))->method('getBaseRole')->will($this->returnValue('ROLE_FOO_%s'));
@@ -113,7 +111,7 @@ class EditableRolesBuilderTest extends TestCase
         $this->assertEquals($expected, $roles);
     }
 
-    public function testWithNoSecurityToken(): void
+    public function testWithNoSecurityToken()
     {
         $tokenStorage = $this->createMock(TokenStorageInterface::class);
         $tokenStorage->expects($this->any())->method('getToken')->will($this->returnValue(null));

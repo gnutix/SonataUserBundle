@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 /*
  * This file is part of the Sonata Project package.
  *
@@ -39,7 +37,7 @@ class RestoreRolesTransformer implements DataTransformerInterface
     /**
      * @param array|null $originalRoles
      */
-    public function setOriginalRoles(array $originalRoles = null): void
+    public function setOriginalRoles(array $originalRoles = null)
     {
         $this->originalRoles = $originalRoles ?: [];
     }

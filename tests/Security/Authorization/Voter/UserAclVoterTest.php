@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 /*
  * This file is part of the Sonata Project package.
  *
@@ -20,7 +18,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
 
 class UserAclVoterTest extends TestCase
 {
-    public function testVoteWillAbstainWhenAUserIsLoggedInAndASuperAdmin(): void
+    public function testVoteWillAbstainWhenAUserIsLoggedInAndASuperAdmin()
     {
         // Given
         $user = $this->createMock('FOS\UserBundle\Model\UserInterface');
@@ -46,7 +44,7 @@ class UserAclVoterTest extends TestCase
         $this->assertEquals(VoterInterface::ACCESS_ABSTAIN, $decision, 'Should abstain from voting');
     }
 
-    public function testVoteWillDenyAccessWhenAUserIsLoggedInAndNotASuperAdmin(): void
+    public function testVoteWillDenyAccessWhenAUserIsLoggedInAndNotASuperAdmin()
     {
         // Given
         $user = $this->createMock('FOS\UserBundle\Model\UserInterface');
@@ -72,7 +70,7 @@ class UserAclVoterTest extends TestCase
         $this->assertEquals(VoterInterface::ACCESS_DENIED, $decision, 'Should deny access');
     }
 
-    public function testVoteWillAbstainWhenAUserIsNotAvailable(): void
+    public function testVoteWillAbstainWhenAUserIsNotAvailable()
     {
         // Given
         $user = $this->createMock('FOS\UserBundle\Model\UserInterface');
@@ -97,7 +95,7 @@ class UserAclVoterTest extends TestCase
         $this->assertEquals(VoterInterface::ACCESS_ABSTAIN, $decision, 'Should abstain from voting');
     }
 
-    public function testVoteWillAbstainWhenAUserIsLoggedInButIsNotAFOSUser(): void
+    public function testVoteWillAbstainWhenAUserIsLoggedInButIsNotAFOSUser()
     {
         // Given
         $user = $this->createMock('FOS\UserBundle\Model\UserInterface');
