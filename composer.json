@@ -1,7 +1,7 @@
 {
     "name": "runroom/user-bundle",
     "type": "symfony-bundle",
-    "description": "Symfony SonataUserBundle",
+    "description": "SonataUserBundle fork to restore compatibility with PHP 5.6 and 7.0",
     "keywords": [
         "user",
         "sonata",
