@@ -1,3 +1,16 @@
+# Runroom's Sonata User Bundle fork
+
+This fork is an extension of Sonata User Bundle 4.x branch, which is only compatible with :
+
+* PHP `^7.1`
+* Symfony `^2.8`, `^3.2` and `^4.0`
+
+It's purpose is to restore the bundle's compatibility with the following PHP versions:
+
+* PHP `^5.6` and `^7.0`
+
+To use it, simply replace `"sonata-project/user-bundle": "^4.1"` by `"runroom/user-bundle": "4.x-dev"` in your `composer.json` file and run `composer update`.
+
 # Sonata User Bundle
 
 Symfony SonataUserBundle
